@@ -50,10 +50,10 @@
       indeterminate
       ></v-progress-circular> -->
       <ChartWidget
-      v-if="dataChart.length>0"
       :data="dataChart"
       :categories="categoriesChart"
       @token="getToken"
+      @selectTicker="(ticker, month)=>getChartData(ticker, month)"
       >
       </ChartWidget>
     </v-row>
